@@ -1,7 +1,7 @@
 @Library('olcne-pipeline') _
 import com.oracle.olcne.pipeline.BranchPattern
 
-syslinuxImage = "container-registry.oracle.com/olcne/util:syslinux"
+syslinuxImage = "olcne/util:syslinux"
 ocrImage = "container-registry.oracle.com/${syslinuxImage}"
 
 imagePipeline(
