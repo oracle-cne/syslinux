@@ -6,7 +6,7 @@ ocrImage = "container-registry.oracle.com/${syslinuxImage}"
 
 imagePipeline(
   branchPattern: new BranchPattern(master: 'main', feature: '(?!^release/.*$)(^.*$)'),
-  containers: [ocrImage: syslinuxImage],
+  containers: ["${ocrImage}": "${syslinuxImage}"],
   platforms: ['ol8'],
   architectures: ['x86_64'],
   buildScript: "podman build -t ${ocrImage} ."
