@@ -1,4 +1,4 @@
-Library('olcne-pipeline') _
+@Library('olcne-pipeline') _
 import com.oracle.olcne.pipeline.BranchPattern
 
 syslinuxImage = "container-registry.oracle.com/olcne/util:syslinux"
@@ -7,7 +7,7 @@ ocrImage = "container-registry.oracle.com/${syslinuxImage}"
 imagePipeline(
   branchPattern: new BranchPattern(master: 'main', feature: '(?!^release/.*$)(^.*$)'),
   containers: [ocrImage: syslinuxImage],
-        platforms: ['ol8'],
-        architectures: ['x86_64'],
-        buildScript: "podman build -t ${ocrImage} ."
+  platforms: ['ol8'],
+  architectures: ['x86_64'],
+  buildScript: "podman build -t ${ocrImage} ."
 )
