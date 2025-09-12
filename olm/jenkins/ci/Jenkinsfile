@@ -1,4 +1,4 @@
-@Library('olcne-pipeline@status') _
+@Library('olcne-pipeline') _
 import com.oracle.olcne.pipeline.BranchPattern
 
 syslinuxImage = "olcne/ock:syslinux"
